@@ -1,0 +1,12 @@
+name = "cm-webhooks"
+main = "src/index.ts"
+account_id = "0536f08a9ac1cd636b61a61f1c4014a0"
+compatibility_date = "2025-09-14"
+
+# Route only the webhook paths through this Worker on your custom domain
+routes = [
+  { pattern = "hooks.convertmaps.io/webhook/*", zone_name = "convertmaps.io" }
+]
+
+[vars]
+WEBHOOK_BASE_URL = "https://hooks.convertmaps.io"
